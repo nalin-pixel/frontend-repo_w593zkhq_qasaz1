@@ -8,17 +8,14 @@ import FAQ from './components/FAQ';
 export default function App() {
   useEffect(() => {
     document.title = 'Primi Posti: più clienti locali in 7 giorni | 99 €';
+    const descText = 'Primi Posti: domina le ricerche locali su Google e Maps. Attivazione 3–7 giorni. Prezzo fisso 99 €.';
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Primi Posti di primiposti.it: pacchetto completo per dominare le ricerche locali su Google e Maps. Attivazione 3–7 giorni. Prezzo fisso 99 €.'
-      );
+      metaDesc.setAttribute('content', descText);
     } else {
       const m = document.createElement('meta');
       m.name = 'description';
-      m.content =
-        'Primi Posti di primiposti.it: pacchetto completo per dominare le ricerche locali su Google e Maps. Attivazione 3–7 giorni. Prezzo fisso 99 €.';
+      m.content = descText;
       document.head.appendChild(m);
     }
 
